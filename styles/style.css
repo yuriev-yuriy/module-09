@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
+        url('../fonts/montserrat-v14-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+        url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'),
+        url('../fonts/montserrat-v14-latin-700.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'),
+        url('../fonts/roboto-v20-latin-300.woff2') format('woff2'),
+        url('../fonts/roboto-v20-latin-300.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'),
+        url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'),
+        url('../fonts/roboto-v20-latin-regular.woff') format('woff');
+}
+
+:root {
+    --font: 'Roboto', sans-serif;
+    --font-color: #fff;
+    --second-font-color: #333;
+    --third-font-color: #666;
+    --forth-font-color: #ff4e50;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Montserrat', "sans-serif";
+    font-size: 14px;
+    font-weight: bold;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    background-image: url(..//images/mobile-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1a1915;
+    padding: 20px 0 138px;
+}
+
+.header-list {
+    display: flex;
+    justify-content: center;
+}
+
+.header-list button {
+    border: none;
+    color: var(--font-color);
+    width: 94px;
+    height: 40px;
+    background-color: transparent;
+    font-weight: 700;
+    line-height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+    outline: none;
+}
+
+.header-list button:hover {
+    border: solid 2px #fff;
+    border-radius: 20px;
+}
+
+.autorization {
+    margin-bottom: 118px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color: var(--font-color);
+    text-transform: uppercase;
+}
+
+.logotype {
+    margin-bottom: 34px;
+}
+
+.header-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: var(--font-color);
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+.header-description {
+    font-family: var(--font);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    color: var(--font-color);
+    margin: 0 0 18px;
+}
+
+.header-link {
+    background-color: var(--forth-font-color);
+    border: solid 2px #ff4e50;
+    border-radius: 20px;
+    color: var(--font-color);
+    width: 280px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+[class*="col-12"] {
+    padding-right: 0;
+    padding-left: 0;
+}
