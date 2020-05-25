@@ -1,41 +1,41 @@
 @font-face {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
-    src: local('Montserrat Regular'), local('Montserrat-Regular'),
-        url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
-        url('../fonts/montserrat-v14-latin-regular.woff') format('woff');
+    src: local("Montserrat Regular"), local("Montserrat-Regular"),
+        url("../fonts/montserrat-v14-latin-regular.woff2") format("woff2"),
+        url("../fonts/montserrat-v14-latin-regular.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    src: local('Montserrat Bold'), local('Montserrat-Bold'),
-        url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'),
-        url('../fonts/montserrat-v14-latin-700.woff') format('woff');
+    src: local("Montserrat Bold"), local("Montserrat-Bold"),
+        url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
+        url("../fonts/montserrat-v14-latin-700.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 300;
-    src: local('Roboto Light'), local('Roboto-Light'),
-        url('../fonts/roboto-v20-latin-300.woff2') format('woff2'),
-        url('../fonts/roboto-v20-latin-300.woff') format('woff');
+    src: local("Roboto Light"), local("Roboto-Light"),
+        url("../fonts/roboto-v20-latin-300.woff2") format("woff2"),
+        url("../fonts/roboto-v20-latin-300.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
-    src: local('Roboto'), local('Roboto-Regular'),
-        url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'),
-        url('../fonts/roboto-v20-latin-regular.woff') format('woff');
+    src: local("Roboto"), local("Roboto-Regular"),
+        url("../fonts/roboto-v20-latin-regular.woff2") format("woff2"),
+        url("../fonts/roboto-v20-latin-regular.woff") format("woff");
 }
 
 :root {
-    --font: 'Roboto', sans-serif;
+    --font: "Roboto", sans-serif;
     --font-color: #fff;
     --second-font-color: #333;
     --third-font-color: #666;
@@ -44,7 +44,7 @@
 
 html {
     box-sizing: border-box;
-    font-family: 'Montserrat', "sans-serif";
+    font-family: "Montserrat", "sans-serif";
     font-size: 14px;
     font-weight: bold;
 }
@@ -53,6 +53,8 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 img {
@@ -64,16 +66,6 @@ img {
 ul,
 li {
     list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-h1,
-h2,
-h3,
-p {
-    margin: 0;
-    padding: 0;
 }
 
 a {
@@ -87,6 +79,7 @@ header {
     background-size: cover;
     background-color: #1a1915;
     padding: 20px 0 138px;
+    margin: 0 auto;
 }
 
 .header-list {
@@ -97,11 +90,11 @@ header {
 .header-list button {
     border: none;
     color: var(--font-color);
-    width: 94px;
-    height: 40px;
     background-color: transparent;
     font-weight: 700;
     line-height: 16px;
+    width: 94px;
+    height: 40px;
     border: 2px solid rgba(255, 255, 255, 0);
     cursor: pointer;
     outline: none;
@@ -110,10 +103,6 @@ header {
 .header-list button:hover {
     border: solid 2px #fff;
     border-radius: 20px;
-}
-
-.autorization {
-    margin-bottom: 118px;
 }
 
 .logo {
@@ -125,9 +114,17 @@ header {
     text-transform: uppercase;
 }
 
-.logotype {
-    margin-bottom: 34px;
+.header-title span {
+    display: block;
+    min-width: 291px;
 }
+
+/* или min-width: 291px .header-title span надо задавать или конструкцию ниже чтоб нижняя часть заголовка не прыгала в новую строку при ширине экрана 320px,
+как правильно? */
+/* [class *="col-12"] {
+  padding-right: 0;
+  padding-left: 0;
+} */
 
 .header-title {
     font-size: 30px;
@@ -159,7 +156,190 @@ header {
     padding-top: 10px;
 }
 
-[class*="col-12"] {
-    padding-right: 0;
-    padding-left: 0;
+main {
+    text-align: center;
+    padding: 74px 0 58px;
+}
+
+.partners h2 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    color: var(--second-font-color);
+    margin: 0 auto 20px;
+}
+
+.partner-image {
+    margin: 0 auto 24px;
+    position: relative;
+    width: 121px;
+    height: 121px;
+
+}
+
+.icon::after {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: solid 4px rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.tv-icon::after {
+    background-image: url(..//images/1st-icon.png);
+    background-color: var(--forth-font-color);
+}
+
+.science-icon::after {
+    background-image: url(../images/2nd-icon.png);
+    background-color: rgb(255, 165, 7);
+}
+
+.cup-icon::after {
+    background-image: url(../images/3rd-icon.png);
+    background-color: rgb(28, 215, 173);
+}
+
+.message-icon::after {
+    background-image: url(../images/4th-icon.png);
+    background-color: rgb(78, 115, 219);
+}
+
+.partner-name {
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 16px;
+    color: var(--second-font-color);
+}
+
+.partner-desc {
+    font-family: var(--font);
+    font-weight: 300;
+    line-height: 16px;
+    color: var(--third-font-color);
+}
+
+.partners a {
+    font-weight: 700;
+    line-height: 16px;
+    color: var(--forth-font-color);
+    border: 2px solid var(--forth-font-color);
+    border-radius: 20px;
+    padding: 10px 0;
+    display: block;
+    margin: 0 auto;
+}
+
+.partner-list {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+    .autorization {
+        margin-bottom: 118px;
+    }
+
+    .partner-list-item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .logotype {
+        margin-bottom: 34px;
+    }
+
+    .header-description span {
+        display: block;
+        min-width: 291px;
+    }
+
+    .partners h2 {
+        max-width: 320px;
+    }
+
+    .partner-desc {
+        max-width: 218px;
+        margin: 0 auto;
+    }
+
+    .partners a {
+        max-width: 280px;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 38px 0 234px;
+        background-image: url(../images/tablet-banner.png);
+    }
+
+    .nav {
+        margin-bottom: 168px;
+    }
+
+
+    .header-title {
+        margin: 0 auto 50px;
+        font-size: 52px;
+        line-height: 62px;
+    }
+
+    .header-description {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 36px;
+    }
+
+    .partners {
+        padding-bottom: 40px;
+    }
+
+    .partner-list {
+        margin-bottom: 40px;
+    }
+
+    .partner-list-item:nth-child(2) {
+        order: 1;
+    }
+
+    .partner-list-item:last-child {
+        order: 2;
+    }
+
+    .partners h2 {
+        margin-bottom: 34px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .partner-list-item:not(:nth-child(2n)) {
+        margin-bottom: 60px;
+    }
+
+    .header-list {
+        padding-right: 50px;
+    }
+
+    .logo {
+        padding-left: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        background-image: url(../images/desktop-banner.png);
+    }
+
+    .partners {
+        padding-bottom: 72px;
+    }
+
+    .load-more {
+        max-width: 200px;
+    }
 }

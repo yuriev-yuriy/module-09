@@ -31,7 +31,7 @@ html {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 660px;
+    max-width: 748px;
   }
 }
 
@@ -72,7 +72,7 @@ html {
   .container,
   .container-sm,
   .container-md {
-    max-width: 660px;
+    max-width: 748px;
   }
 }
 
